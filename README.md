@@ -27,7 +27,7 @@ Instead of either close all tabs or all tabs except the currently selected you g
 
 Compatibility
 -------------
-Compatible with NetBeans 11.0+ and JDK 8+.
+Compatible with NetBeans 11.0+ and JDK 11+.
 
 Downloads
 ---------
