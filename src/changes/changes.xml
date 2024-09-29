@@ -9,54 +9,9 @@
 	</properties>
 
 	<body>
-		<release version="1.0.6" date="2024-03-19" description="Hotfix release">
-			<action dev="bahlef" type="fix" issue="32">
-				Fixed close left action which closed all tabs instead of only the left tabs of the selected tab.
-			</action>
-		</release>
-
-		<release version="1.0.5" date="2024-02-27" description="More close actions and options panel">
-			<action dev="bahlef" type="add" issue="22">
-				Added action to close versioning diff editor tabs.
-			</action>
+		<release version="0.1" date="2024-09-29" description="First release">
 			<action dev="bahlef" type="add">
-				Added action to close versioning search history editor tabs.
-			</action>
-			<action dev="bahlef" type="add" issue="22">
-				Added options panel so a user can select which additional close actions should be shown or not.
-			</action>
-		</release>
-
-		<release version="1.0.4" date="2023-08-10" description="Fixed new close actions">
-			<action dev="bahlef" type="fix" issue="17">
-				Fixed new VCS and project actions.
-			</action>
-		</release>
-
-		<release version="1.0.3" date="2023-06-15" description="Added more close actions">
-			<action dev="bahlef" type="add" issue="13">
-				Added close action to close all tabs which are not changed in the used VCS (Git, SVN and Mercurial supported).
-			</action>
-			<action dev="bahlef" type="add">
-				Added close actions to close all tabs which either belong or not belong to the project of the selected tab.
-			</action>
-		</release>
-
-		<release version="1.0.2" date="2023-01-26" description="Added signing of nbm">
-			<action dev="bahlef" type="add">
-				Signing of nbm file as requested by the NetBeans team to get the plugin center verification
-			</action>
-		</release>
-
-		<release version="1.0.1" date="2022-10-02" description="Moved actions at the correct position">
-			<action dev="bahlef" type="fix" issue="1">
-				With the help of Yenta, I was able to move the actions right next to the NetBeans close actions.
-			</action>
-		</release>
-
-		<release version="1.0.0" date="N/A" description="First release from funfried aka bahlef aka fbahle">
-			<action dev="bahlef" type="update">
-				Update plugin to latest dependencies and plugins and made it ready for the NetBeans plugin center to be published
+				Created this plugin extension due to NetBeans specific VCS actions dependencies.
 			</action>
 		</release>
 	</body>

@@ -22,7 +22,7 @@
 
 	<groupId>de.funfried.netbeans.plugins</groupId>
 	<artifactId>nb-editor-close-left-right-vcs-extension-nb22</artifactId>
-	<version>0.1-SNAPSHOT</version>
+	<version>0.1</version>
 	<packaging>nbm</packaging>
 
 	<developers>
@@ -100,7 +100,7 @@
 		<dependency>
 			<groupId>de.funfried.netbeans.plugins</groupId>
 			<artifactId>nb-editor-close-left-right</artifactId>
-			<version>1.0.7-SNAPSHOT</version>
+			<version>1.0.7</version>
 		</dependency>
 
 		<!-- NetBeans -->
@@ -247,7 +247,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-gpg-plugin</artifactId>
-					<version>3.2.5</version>
+					<version>3.2.6</version>
 				</plugin>
 				<plugin>
 					<groupId>net.revelc.code.formatter</groupId>
@@ -652,35 +652,27 @@
 
 	<profiles>
 		<profile>
+			<id>github</id>
+			<distributionManagement>
+				<repository>
+					<id>github</id>
+					<name>GitHub funfried Apache Maven Packages</name>
+					<url>https://maven.pkg.github.com/funfried/nb-editor-close-left-right</url>
+				</repository>
+				<snapshotRepository>
+					<id>github</id>
+					<url>https://maven.pkg.github.com/funfried/nb-editor-close-left-right</url>
+				</snapshotRepository>
+			</distributionManagement>
+		</profile>
+		<profile>
 			<id>sonatype-oss-release</id>
 			<build>
 				<plugins>
 					<plugin>
-						<groupId>org.codehaus.mojo</groupId>
-						<artifactId>build-helper-maven-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>regex-snapshot-property</id>
-								<phase>validate</phase>
-								<goals>
-									<goal>regex-property</goal>
-								</goals>
-								<configuration>
-									<name>project.version.isSnapshot</name>
-									<value>${project.version}</value>
-									<regex>.*(-SNAPSHOT)$</regex>
-									<replacement>true</replacement>
-									<failIfNoMatch>false</failIfNoMatch>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
-					<plugin>
-						<groupId>org.sonatype.central</groupId>
-						<artifactId>central-publishing-maven-plugin</artifactId>
-						<configuration>
-							<skipPublishing>${project.version.isSnapshot}</skipPublishing>
-						</configuration>
+						<groupId>org.sonatype.plugins</groupId>
+						<artifactId>nexus-staging-maven-plugin</artifactId>
+						<extensions>true</extensions>
 					</plugin>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
