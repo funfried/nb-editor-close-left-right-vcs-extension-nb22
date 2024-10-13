@@ -9,6 +9,12 @@
 	</properties>
 
 	<body>
+		<release version="0.3" date="2024-10-13" description="Hotfix release">
+			<action dev="bahlef" type="fix">
+				Fixed dependency to main plugin (from jar to nbm), because both plugins got uninstalled when the extension was deleted
+			</action>
+		</release>
+
 		<release version="0.2" date="2024-09-29" description="Hotfix release">
 			<action dev="bahlef" type="fix">
 				Fixed issues when releasing the plugin to GitHub packages and Maven Central
